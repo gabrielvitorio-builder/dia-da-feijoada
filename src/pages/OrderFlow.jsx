@@ -127,7 +127,7 @@ function Header({ step }) {
   return (
     <div className="hero">
       <div className="hero__badge">
-        26/10
+        26/09
         <strong>Sáb</strong>
       </div>
       <p className="hero__eyebrow">Dia da</p>
@@ -261,7 +261,7 @@ function StepDados({ cart, errors, onBack, onNext }) {
           <label htmlFor="horario">Horário desejado ({c.entrega === 'delivery' ? 'entrega' : 'retirada'})</label>
           <select id="horario" value={c.horario} onChange={(e) => set({ horario: e.target.value })}>
             <option value="">Selecione um horário</option>
-            {['11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00'].map((h) => (
+            {['11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00'].map((h) => (
               <option key={h} value={h}>
                 {h}
               </option>
