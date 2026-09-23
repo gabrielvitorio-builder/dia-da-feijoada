@@ -190,7 +190,7 @@ export default function AdminDashboard() {
                       o.feijoadaP ? `${o.feijoadaP}P` : null,
                       o.feijoadaG ? `${o.feijoadaG}G` : null,
                       o.sucoMaracuja ? `${o.sucoMaracuja} maracujá` : null,
-                      o.sucoLaranja ? `${o.sucoMLaranja} laranja` : null,
+                      o.sucoLaranja ? `${o.sucoLaranja} laranja` : null,
                       o.sucoAbacaxi ? `${o.sucoAbacaxi} abacaxi` : null,
                       o.sucoGoiaba ? `${o.sucoGoiaba} goiaba` : null
                     ]
