@@ -67,7 +67,7 @@ usada internamente para nunca gravar o mesmo pedido duas vezes.
 ### Colunas da aba "Pedidos"
 
 Nº Pedido · Data/Hora · Nome · WhatsApp · Feijoada P · Feijoada G · Suco
-Maracujá · Suco Abacaxi · Suco Goiaba · Total · Pagamento · Troco ·
+Maracujá · Suco Laranja ·Suco Abacaxi · Suco Goiaba · Total · Pagamento · Troco ·
 Delivery/Retirada · Horário · Endereço · Referência · Status ·
 IdempotencyKey (coluna técnica, pode ocultar na planilha)
 
@@ -132,7 +132,7 @@ já que o Vite as embute no build estático).
 
 ## Fluxo do cliente
 
-1. Escolhe quantidades de Feijoada P, Feijoada G e sucos (maracujá, abacaxi,
+1. Escolhe quantidades de Feijoada P, Feijoada G e sucos (maracujá, laranja, abacaxi,
    goiaba).
 2. Preenche nome, WhatsApp, retirada ou delivery, horário, forma de
    pagamento (e troco, se for dinheiro) e endereço (se for delivery).
