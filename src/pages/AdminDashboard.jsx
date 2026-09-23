@@ -119,6 +119,7 @@ export default function AdminDashboard() {
         <Kpi label="Feijoada P" value={summary.feijoadaP} />
         <Kpi label="Feijoada G" value={summary.feijoadaG} />
         <Kpi label="Suco Maracujá" value={summary.sucoMaracuja} />
+        <Kpi label="Suco Laranja" value={summary.sucoLaranja} />
         <Kpi label="Suco Abacaxi" value={summary.sucoAbacaxi} />
         <Kpi label="Suco Goiaba" value={summary.sucoGoiaba} />
         <Kpi label="Delivery / Retirada" value={`${summary.delivery} / ${summary.retirada}`} />
@@ -189,6 +190,7 @@ export default function AdminDashboard() {
                       o.feijoadaP ? `${o.feijoadaP}P` : null,
                       o.feijoadaG ? `${o.feijoadaG}G` : null,
                       o.sucoMaracuja ? `${o.sucoMaracuja} maracujá` : null,
+                      o.sucoLaranja ? `${o.sucoMLaranja} laranja` : null,
                       o.sucoAbacaxi ? `${o.sucoAbacaxi} abacaxi` : null,
                       o.sucoGoiaba ? `${o.sucoGoiaba} goiaba` : null
                     ]
