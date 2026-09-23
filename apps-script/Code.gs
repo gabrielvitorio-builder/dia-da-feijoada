@@ -244,39 +244,52 @@ function handleGetOrders(token) {
   var ss = getSpreadsheet()
   var sheet = getOrCreateSheet(ss, SHEET_PEDIDOS, HEADERS)
   var data = sheet.getDataRange().getValues()
-  if (data.length <= 1) return { ok: true, data: { orders: [] } }
+
+  if (data.length <= 1) {
+    return { ok: true, data: { orders: [] } }
+  }
 
   var rows = data.slice(1)
+
   var orders = rows
     .filter(function (r) {
-      return r[0] // ignora linhas vazias
+      return r[0]
     })
     .map(function (r) {
       return {
         numero: r[0],
-        dataHora: r[1],
+        dataHora: formatDateCell(r[1], 'dd/MM/yyyy HH:mm:ss'),
         nome: r[2],
         whatsapp: r[3],
+
         feijoadaP: r[4],
         feijoadaG: r[5],
+
         sucoMaracuja: r[6],
-        sucoLaranja: r[6],
-        sucoAbacaxi: r[7],
-        sucoGoiaba: r[8],
-        total: r[9],
-        pagamento: r[10],
-        trocoPara: r[11],
-        precisaTroco: !!r[11],
-        entrega: r[12],
-        horario: r[13],
-        endereco: r[14],
-        referencia: r[15],
-        status: r[16]
+        sucoLaranja: r[7],
+        sucoAbacaxi: r[8],
+        sucoGoiaba: r[9],
+
+        total: r[10],
+        pagamento: r[11],
+        trocoPara: r[12],
+        precisaTroco: !!r[12],
+
+        entrega: r[13],
+        horario: formatDateCell(r[14], 'HH:mm'),
+        endereco: r[15],
+        referencia: r[16],
+        status: r[17]
       }
     })
-    .reverse() // pedidos mais recentes primeiro
+    .reverse()
 
-  return { ok: true, data: { orders: orders } }
+  return {
+    ok: true,
+    data: {
+      orders: orders
+    }
+  }
 }
 
 function handleUpdateStatus(token, orderNumber, status) {
@@ -296,7 +309,8 @@ function handleUpdateStatus(token, orderNumber, status) {
     var data = sheet.getDataRange().getValues()
     for (var i = 1; i < data.length; i++) {
       if (data[i][0] === orderNumber) {
-        sheet.getRange(i + 1, 17).setValue(status) // coluna 17 = Status
+var statusColumn = HEADERS.indexOf('Status') + 1
+sheet.getRange(i + 1, statusColumn).setValue(status)
         return { ok: true, data: { numero: orderNumber, status: status } }
       }
     }
@@ -325,4 +339,11 @@ function getOrCreateSheet(ss, name, headers) {
     sheet.setFrozenRows(1)
   }
   return sheet
+}
+
+function formatDateCell(value, pattern) {
+  if (value instanceof Date) {
+    return Utilities.formatDate(value, Session.getScriptTimeZone() || 'America/Sao_Paulo', pattern)
+  }
+  return value
 }
