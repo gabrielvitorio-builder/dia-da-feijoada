@@ -20,7 +20,15 @@ export const PRODUCTS = [
   {
     key: 'sucoMaracuja',
     name: 'Suco natural — Maracujá',
-    description: 'Copo de suco natural.',
+    description: 'Garrafinha de suco natural.',
+    price: 10,
+    icon: '🥤',
+    iconClass: 'icon--suco'
+  },
+   {
+    key: 'sucoLaranja',
+    name: 'Suco natural — Laranja',
+    description: 'Garrafinha de suco natural.',
     price: 10,
     icon: '🥤',
     iconClass: 'icon--suco'
@@ -28,7 +36,7 @@ export const PRODUCTS = [
   {
     key: 'sucoAbacaxi',
     name: 'Suco natural — Abacaxi',
-    description: 'Copo de suco natural.',
+    description: 'Garrafinha de suco natural.',
     price: 10,
     icon: '🥤',
     iconClass: 'icon--suco'
@@ -36,7 +44,7 @@ export const PRODUCTS = [
   {
     key: 'sucoGoiaba',
     name: 'Suco natural — Goiaba',
-    description: 'Copo de suco natural.',
+    description: 'Garrafinha de suco natural.',
     price: 10,
     icon: '🥤',
     iconClass: 'icon--suco'
