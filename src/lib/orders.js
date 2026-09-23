@@ -8,6 +8,7 @@ const CSV_COLUMNS = [
   ['feijoadaP', 'Feijoada P'],
   ['feijoadaG', 'Feijoada G'],
   ['sucoMaracuja', 'Suco Maracujá'],
+  ['sucoLaranja', 'Suco Laranja'],
   ['sucoAbacaxi', 'Suco Abacaxi'],
   ['sucoGoiaba', 'Suco Goiaba'],
   ['total', 'Total'],
@@ -51,6 +52,7 @@ export function summarizeOrders(orders) {
     feijoadaG: 0,
     sucoMaracuja: 0,
     sucoAbacaxi: 0,
+    sucoLaranja: 0,
     sucoGoiaba: 0,
     faturamento: 0,
     delivery: 0,
@@ -61,6 +63,7 @@ export function summarizeOrders(orders) {
     summary.feijoadaP += Number(o.feijoadaP) || 0
     summary.feijoadaG += Number(o.feijoadaG) || 0
     summary.sucoMaracuja += Number(o.sucoMaracuja) || 0
+    summary.sucoLaranja += Number(o.sucoLaranja) || 0
     summary.sucoAbacaxi += Number(o.sucoAbacaxi) || 0
     summary.sucoGoiaba += Number(o.sucoGoiaba) || 0
     summary.faturamento += Number(o.total) || 0
