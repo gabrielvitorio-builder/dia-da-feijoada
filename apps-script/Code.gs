@@ -28,6 +28,7 @@ var HEADERS = [
   'Feijoada P',
   'Feijoada G',
   'Suco Maracujá',
+  'Suco Laranja',
   'Suco Abacaxi',
   'Suco Goiaba',
   'Total',
@@ -134,6 +135,7 @@ function handleCreateOrder(order, idempotencyKey) {
       Number(itens.feijoadaP) || 0,
       Number(itens.feijoadaG) || 0,
       Number(itens.sucoMaracuja) || 0,
+      Number(itens.sucoLaranja) || 0,
       Number(itens.sucoAbacaxi) || 0,
       Number(itens.sucoGoiaba) || 0,
       Number(order.total) || 0,
@@ -178,6 +180,7 @@ function validateOrder(order) {
     (Number(itens.feijoadaP) || 0) +
     (Number(itens.feijoadaG) || 0) +
     (Number(itens.sucoMaracuja) || 0) +
+    (Number(itens.sucoLaranja) || 0) +
     (Number(itens.sucoAbacaxi) || 0) +
     (Number(itens.sucoGoiaba) || 0)
   if (totalItens <= 0) {
@@ -257,6 +260,7 @@ function handleGetOrders(token) {
         feijoadaP: r[4],
         feijoadaG: r[5],
         sucoMaracuja: r[6],
+        sucoLaranja: r[6],
         sucoAbacaxi: r[7],
         sucoGoiaba: r[8],
         total: r[9],
