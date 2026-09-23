@@ -23,6 +23,7 @@ export default function OrderDetailModal({ order, onClose, onStatusChange, updat
           <Row label="Feijoada P" value={order.feijoadaP} />
           <Row label="Feijoada G" value={order.feijoadaG} />
           <Row label="Suco Maracujá" value={order.sucoMaracuja} />
+          <Row label="Suco Laranja" value={order.sucoLaranja} />
           <Row label="Suco Abacaxi" value={order.sucoAbacaxi} />
           <Row label="Suco Goiaba" value={order.sucoGoiaba} />
           <Row label="Total" value={formatBRL(order.total)} />
