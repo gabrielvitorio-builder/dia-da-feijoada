@@ -60,6 +60,7 @@ export default function Producao() {
           <ProductionCard label="Feijoada P" value={summary.feijoadaP} icon="P" iconClass="icon--p" />
           <ProductionCard label="Feijoada G" value={summary.feijoadaG} icon="G" iconClass="icon--g" />
           <ProductionCard label="Suco Maracujá" value={summary.sucoMaracuja} icon="🥤" iconClass="icon--suco" />
+          <ProductionCard label="Suco Laranja" value={summary.sucoLaranja} icon="🥤" iconClass="icon--suco" />
           <ProductionCard label="Suco Abacaxi" value={summary.sucoAbacaxi} icon="🥤" iconClass="icon--suco" />
           <ProductionCard label="Suco Goiaba" value={summary.sucoGoiaba} icon="🥤" iconClass="icon--suco" />
 
